@@ -1,0 +1,54 @@
+/* Styling for the body */
+body {
+    font-family: Arial, sans-serif; /* Set font style */
+    margin: 20px;
+    padding: 0;
+}
+
+/* Container to center the content */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Form group for input fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style for labels */
+label {
+    display: block; /* Block-level display for better spacing */
+    margin-bottom: 5px;
+}
+
+/* Style for input, select, and button elements */
+input, select, button {
+    width: 100%; /* Full width for better alignment */
+    padding: 10px; /* Space inside the element */
+    font-size: 16px; /* Increase font size for readability */
+    margin-bottom: 10px; /* Add spacing between elements */
+}
+
+/* Table styles */
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Merge table borders */
+    margin-top: 20px; /* Add spacing above the table */
+}
+
+/* Add border to table, headers, and cells */
+table, th, td {
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+/* Padding inside table cells */
+th, td {
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Background color for table headers */
+th {
+    background-color: #f4f4f4; /* Light gray background */
+}

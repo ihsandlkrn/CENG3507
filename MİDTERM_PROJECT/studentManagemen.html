@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Management</title>
+    <link rel="stylesheet" type="text/css" href="studentManagement.css">
+    <script src="studentManagement.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Course Management</h1>
+
+        <!-- Add a Lecture -->
+        <h2>Add a Lecture</h2>
+        <div class="form-group">
+            <label for="lectureCode">Lecture Code</label>
+            <input type="text" id="lectureCode" placeholder="Enter Lecture Code">
+        </div>
+        <div class="form-group">
+            <label for="lectureName">Lecture Name</label>
+            <input type="text" id="lectureName" placeholder="Enter Lecture Name">
+        </div>
+        <div class="form-group">
+            <label for="teacherName">Teacher Name</label>
+            <input type="text" id="teacherName" placeholder="Enter Teacher Name">
+        </div>
+        <button id="btnAddLecture">Add Lecture</button>
+
+        <!-- Add a Student -->
+        <h2>Add a Student</h2>
+        <div class="form-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" placeholder="Enter Student ID">
+        </div>
+        <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+        </div>
+        <div class="form-group">
+            <label for="studentSurname">Student Surname</label>
+            <input type="text" id="studentSurname" placeholder="Enter Student Surname">
+        </div>
+        <button id="btnAddStudent">Add Student</button>
+        <!-- Update Lecture Details -->
+        <h2>Update Lecture Details</h2>
+        <div class="form-group">
+            <label for="currentLectureId">Current Lecture ID</label>
+            <input type="text" id="currentLectureId" placeholder="Enter Current Lecture ID">
+        </div>
+        <div class="form-group">
+            <label for="newLectureId">New Lecture ID (optional)</label>
+            <input type="text" id="newLectureId" placeholder="Enter New Lecture ID">
+        </div>
+        <div class="form-group">
+            <label for="newLectureName">New Lecture Name (optional)</label>
+            <input type="text" id="newLectureName" placeholder="Enter New Lecture Name">
+        </div>
+        <div class="form-group">
+            <label for="newTeacherName">New Teacher Name (optional)</label>
+            <input type="text" id="newTeacherName" placeholder="Enter New Teacher Name">
+        </div>
+        <button id="btnUpdateLecture">Update Lecture</button>
+
+
+        <!-- Update Student Details -->
+        <h2>Update Student Details</h2>
+        <div class="form-group">
+            <label for="updateStudentCurrentId">Current Student ID</label>
+            <input type="text" id="updateStudentCurrentId" placeholder="Current Student ID">
+        </div>
+        <div class="form-group">
+            <label for="updateStudentNewId">New Student ID (optional)</label>
+            <input type="text" id="updateStudentNewId" placeholder="New Student ID">
+        </div>
+        <div class="form-group">
+            <label for="updateStudentNewName">New Name (optional)</label>
+            <input type="text" id="updateStudentNewName" placeholder="New Name">
+        </div>
+        <div class="form-group">
+            <label for="updateStudentNewSurname">New Surname (optional)</label>
+            <input type="text" id="updateStudentNewSurname" placeholder="New Surname">
+        </div>
+        <button id="btnUpdateStudent">Update Student</button>
+
+        <!-- Console Log Output --> 
+        <h3>Console Output:</h3>
+        <pre id="consoleOutput"></pre>
+
+        <!-- Register Student to a Lecture -->
+        <h2>Register Student to a Lecture</h2>
+        <div class="form-group">
+            <label for="selectLecture">Select Lecture</label>
+            <select id="selectLecture">
+                <!-- Lectures will be dynamically added here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="selectStudent">Select Student</label>
+            <select id="selectStudent">
+                <!-- Students will be dynamically added here -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="midtermScore">Midterm Score</label>
+            <input type="number" id="midtermScore" placeholder="Enter Midterm Score">
+        </div>
+        <div class="form-group">
+            <label for="finalScore">Final Score</label>
+            <input type="number" id="finalScore" placeholder="Enter Final Score">
+        </div>
+        <button id="btnRegister">Register Student</button>
+
+        <!--  View Students in a Lecture -->
+        <h2>Calculate GPA</h2>
+        <div class="form-group">
+            <label for="studentIdGPA">Student ID</label>
+            <input type="text" id="studentIdGPA" placeholder="Enter Student ID">
+        </div>
+        <button id="btnCalculateGPA">Calculate GPA</button>
+        <h3>GPA Result:</h3>
+        <p id="gpaResult"></p>
+        
+        <h2>View Students in a Lecture</h2>
+        <div class="form-group">
+            <label for="viewLecture">Select Lecture</label>
+            <select id="viewLecture">
+                <!-- Lectures will be dynamically added here -->
+            </select>
+        </div>
+        <button id="btnShowStudent">View Students</button>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Midterm</th>
+                    <th>Final</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Students will be dynamically added here -->
+            </tbody>
+        </table>
+        <!-- Summary -->
+        <h3>Summary:</h3>
+        <p id="summary">No data to display.</p>
+
+        <h2>Select a Lecture</h2>
+        <div class="form-group">
+            <label for="selectLecture">Select Lecture</label>
+            <select id="passOrFail">
+                <!-- Lectures will be dynamically added here -->
+            </select>
+        </div>
+
+        <!-- Geçen Öğrencileri Gör -->
+        <button id="btnShowPassedStudents">View Passed Students</button>
+
+        <!-- Kalan Öğrencileri Gör -->
+        <button id="btnShowFailedStudents">View Failed Students</button>
+
+        <h2>Class Average</h2>
+        <div class="form-group">
+            <label for="classAverageLecture">Select Lecture</label>
+            <select id="classAverageLecture">
+                <!-- Lectures will be dynamically added here -->
+            </select>
+        </div>
+        <button id="btnCalculateClassAverage">Calculate Class Average</button>
+        <h3>Result:</h3>
+        <p id="classAverageResult">No data to display.</p>
+
+        <!-- Student table -->
+        <h2>Student Details</h2>
+        <table id="studentTable2">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Students will be dynamically added here -->
+            </tbody>
+        </table>
+        
+    </div>
+
+    
+
+    
+</body>
+</html>
